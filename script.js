@@ -54,7 +54,7 @@ function updateTime() {
 function gameOver() {
   endGameEl.innerHTML = `
   <h1>Time ran out</h1>
-  <p>Your finel score is ${score}</p>
+  <p>Your final score is ${score}</p>
   <button onClick="location.reload()">Reload</button>`;
   endGameEl.style.display = "flex";
 }
@@ -64,7 +64,7 @@ addWordToDOM();
 text.addEventListener("input", (e) => {
   const insertedText = e.target.value;
 
-  if (insertedText === randomWord) {
+  if (insertedText.toLowerCase() === randomWord) {
     addWordToDOM();
     updateScore();
 
